@@ -1,0 +1,130 @@
+<view class="page">
+	<view class='picture-one'></view>
+	<view class='picture-two'></view>
+	<view class='picture-three'></view>
+	<view class='picture-main'>
+		<view class='picture-icon'></view>
+	</view>
+	<view class='good'></view>
+	<view class="collect"></view>
+
+	<view class="personal-information-card">
+		<view class="information">
+			<view class="name-part">
+				<view class="name">孙钰茗</view>
+			</view>
+			<view class="phone-part">
+				<view class="phone">手机</view>
+			</view>
+			<view class="e-mail-part">
+				<view class="e-mail">邮箱</view>
+			</view>
+			<view class="location-part">
+				<view class="location">地址</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="social-contact-card">
+		<view class="social wechat">
+			<view bindtap="showPopupWechat" class="social-icon wechat-icon"></view>
+			<view class="wechat-name">微信</view>
+		</view>
+<van-popup
+  show="{{ showwechat }}"
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="showCloseWechat"
+
+  closeable
+  round
+  close-icon="close"
+  close-icon-position="top-right"
+>
+<view class="popup">
+  <view  class="popup-icon"></view>
+  <view class="popup-name">微信</view>
+  <view class="popupid">渠道值</view>
+  <view class="popup-name2">渠道备注</view>
+  <button class="popup-button">复制号码</button>
+</view>
+</van-popup>
+		
+
+		<view class="social qq">
+			<view bindtap="showPopupQq" class="social-icon qq-icon"></view>
+			<view class="qq-name">QQ</view>
+		</view>
+<van-popup
+  show="{{ showqq }}"
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="showCloseQq"
+  closeable
+  round
+  close-icon="close"
+  close-icon-position="top-right"
+>
+<view class="popup">
+  <view  class="popup-icon"></view>
+  <view class="popup-name">QQ</view>
+  <view class="popupid">渠道值</view>
+  <view class="popup-name2">渠道备注</view>
+  <button class="popup-button">复制号码</button>
+</view>
+</van-popup>
+
+
+
+
+		<view class="social tiktok">
+			<view bindtap="showPopupTiktok" class="social-icon tiktok-icon"></view>
+			<view class="tiktok-name">抖音</view>
+		</view>
+	</view>
+  <van-popup
+  show="{{ showtiktok }}"
+  position="bottom"
+  custom-style="height: 40%;"
+  bind:close="showCloseTiktok"
+  closeable
+  round
+  close-icon="close"
+  close-icon-position="top-right"
+>
+<view class="popup">
+  <view  class="popup-icon"></view>
+  <view class="popup-name">抖音</view>
+  <view class="popupid">渠道值</view>
+  <view class="popup-name2">渠道备注</view>
+  <button class="popup-button">复制号码</button>
+</view>
+</van-popup>
+
+
+  <button class="button-one">媒体资料</button>
+  <button class="button-two">浏览记录</button>
+
+ <view class="grid-icon-part">
+ <view wx:if="{{ifonticons==2}}" bindtap="onTabOne" class="grid-icon iconfont icon-gallery-view"></view>
+ <view wx:if="{{ifonticons==1}}" bindtap="onTabOne" class="grid-icon iconfont icon-gallery-view grid-icon-color"></view>
+ <view wx:if="{{ifonticons==1}}" bindtap="onTabTwo" class="grid-icon iconfont icon-icon_zhanghao-copy"></view>
+ <view wx:if="{{ifonticons==2}}" bindtap="onTabTwo" class="grid-icon iconfont icon-icon_zhanghao-copy grid-icon-color"></view>
+ </view>
+
+<view class="{{showtrue}}">
+  
+  <van-grid column-num="3" gutter="{{ 10 }}">
+  <van-grid-item icon="photo-o" text="文字" wx:for="{{ 15 }}" />
+  </van-grid>
+
+</view>
+
+<view class="{{showfalse}}">
+tab2
+</view>
+
+
+
+
+</view>
